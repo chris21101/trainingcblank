@@ -10,6 +10,7 @@ import (
 func main() {
 	regHandler := &registrierung.RegistrierungsHandler{}
 	r := mux.NewRouter()
-	r.PathPefix("/").Methods("POST").Handler(regHandler)
+	r.Handle("/", regHandler)
+	r.Methods("POST")
 	http.ListenAndServe("localhost:8989", r)
 }

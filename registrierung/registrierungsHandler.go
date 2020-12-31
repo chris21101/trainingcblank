@@ -10,7 +10,7 @@ import (
 type RegistrierungsHandler struct{}
 
 //ServerHTTP is ....
-func (rh *RegistrierungsHandler) ServerHTTP(rw http.ResponseWriter, req http.Request) {
+func (rh *RegistrierungsHandler) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	err := req.ParseForm()
 	if err != nil {
 		log.Printf("Could not parse form because of %v", err)
