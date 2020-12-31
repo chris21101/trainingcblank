@@ -22,6 +22,11 @@ func (rh *RegistrierungsHandler) ServeHTTP(rw http.ResponseWriter, req *http.Req
 
 	registrierung.Firstname = req.Form.Get("Firstname")
 	registrierung.Lastname = req.Form.Get("Lastname")
+	registrierung.Email = req.Form.Get("Email")
+	registrierung.Firma = req.Form.Get("Firma")
+	registrierung.Firma = req.Form.Get("Firma")
+	registrierung.Schulungscode = req.Form.Get("Schulungscode")
+	registrierung.Datum = req.Form.Get("Datum")
 
 	b, err := strconv.ParseBool(req.Form.Get("DatenschutzAkzeptiert"))
 
