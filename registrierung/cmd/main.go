@@ -5,7 +5,6 @@ import (
 
 	"github.com/chris21101/trainingcblank/registrierung"
 	"github.com/gorilla/mux"
-	"training-fellow.de/registrierung"
 )
 
 func main() {
